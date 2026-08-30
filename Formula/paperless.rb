@@ -1,19 +1,10 @@
 class Paperless < Formula
   desc "Local-first document intake and filing service for macOS"
   homepage "https://github.com/coryoso/paperless"
-  version "0.1.0"
-
-  on_arm do
-    url "https://github.com/coryoso/paperless/releases/download/v0.1.0/paperless_0.1.0_darwin_arm64.tar.gz"
-    sha256 "73a42b435226ea4db906058d88adbd59b69fc9b11280065cb52d0b124fe00c0b"
-  end
-
-  on_intel do
-    url "https://github.com/coryoso/paperless/releases/download/v0.1.0/paperless_0.1.0_darwin_amd64.tar.gz"
-    sha256 "c8e4d18b5428c299a7cc6c54b5705274d3926dc4f5a2986678fea274e262ddce"
-  end
-
+  url "https://github.com/coryoso/paperless/releases/download/v0.1.1/paperless_0.1.1_darwin_all.tar.gz"
+  sha256 "3da37112141083b3df2b6c061f2bfba252be967d4c00db5d862dae6cf364c36b"
   depends_on :macos
+
   depends_on "ollama"
   depends_on "poppler"
   depends_on "qpdf"
@@ -21,7 +12,8 @@ class Paperless < Formula
   depends_on "tesseract-lang"
 
   def install
-    bin.install "paperless"
+    binary = Hardware::CPU.arm? ? "paperless-arm64" : "paperless-amd64"
+    bin.install binary => "paperless"
     etc.install "config.example.toml" => "paperless.toml"
   end
 
