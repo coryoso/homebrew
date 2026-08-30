@@ -1,8 +1,16 @@
-# Cornelius Carl's Homebrew Tap
+# Homebrew
 
-Public Homebrew formulae maintained by Cornelius Carl.
+Public Homebrew tap for my projects.
 
-## Paperless
+Add the tap with:
+
+```bash
+brew tap coryoso/homebrew https://github.com/coryoso/homebrew.git
+```
+
+## Formulae
+
+### Paperless
 
 Install the local-first document intake and filing service with:
 
@@ -10,4 +18,4 @@ Install the local-first document intake and filing service with:
 brew install coryoso/cornelius-carl/paperless
 ```
 
-Paperless releases update the formula and publish a matching release in this repository automatically.
+Upstream releases update their formulae and publish matching releases in this repository automatically.
