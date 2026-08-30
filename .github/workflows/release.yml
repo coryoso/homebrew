@@ -1,0 +1,26 @@
+name: Publish Tap Release
+
+on:
+  push:
+    tags:
+      - "paperless-v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish the tagged formula release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAP_TAG: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          version="${TAP_TAG#paperless-}"
+          gh release create "$TAP_TAG" \
+            --repo "$GITHUB_REPOSITORY" \
+            --verify-tag \
+            --title "Paperless ${version}" \
+            --generate-notes
