@@ -1,11 +1,10 @@
 class Paperless < Formula
   desc "Local-first document intake and filing service for macOS"
   homepage "https://github.com/coryoso/paperless"
-  url "https://github.com/coryoso/paperless/releases/download/v0.1.2/paperless_0.1.2_darwin_all.tar.gz"
-  sha256 "b69b4e51bdfb0529db8da399d799529a6ecc663291ea4245ea757de06eea7db2"
+  url "https://github.com/coryoso/paperless/releases/download/v0.1.3/paperless_0.1.3_darwin_all.tar.gz"
+  sha256 "81bc00b4e6addf3c249347756a7f48deaa2819874f973df8b17e1b483a63ea06"
   depends_on :macos
 
-  depends_on "ollama"
   depends_on "poppler"
   depends_on "qpdf"
   depends_on "tesseract"
@@ -32,6 +31,8 @@ class Paperless < Formula
       Create your user configuration and initialize Paperless with:
         paperless configure
         paperless init
+
+      Local classification requires a running Ollama app or service.
 
       Start Paperless now and automatically at login with:
         brew services start paperless
