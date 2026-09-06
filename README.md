@@ -18,4 +18,4 @@ Install the local-first document intake and filing service with:
 brew install coryoso/homebrew/paperless
 ```
 
-Upstream releases update their formulae and publish matching releases in this repository automatically.
+Stable upstream releases update their formulae in this repository automatically. Release binaries, checksums, and release notes remain in each upstream project; this tap is only the Homebrew formula index.
