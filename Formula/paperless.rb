@@ -1,8 +1,8 @@
 class Paperless < Formula
   desc "Local-first document intake and filing service for macOS"
   homepage "https://github.com/coryoso/paperless"
-  url "https://github.com/coryoso/paperless/releases/download/v0.1.3/paperless_0.1.3_darwin_all.tar.gz"
-  sha256 "81bc00b4e6addf3c249347756a7f48deaa2819874f973df8b17e1b483a63ea06"
+  url "https://github.com/coryoso/paperless/releases/download/v0.1.4/paperless_0.1.4_darwin_all.tar.gz"
+  sha256 "8b71945b5cb7a8658d44d3f84cd6d0185bcccb95e1bcd214ce6c2b591dfbe4ee"
   depends_on :macos
 
   depends_on "poppler"
@@ -28,16 +28,14 @@ class Paperless < Formula
 
   def caveats
     <<~EOS
-      Create your user configuration and initialize Paperless with:
-        paperless configure
-        paperless init
-
       Local classification requires a running Ollama app or service.
 
       Start Paperless now and automatically at login with:
         brew services start paperless
 
-      The dashboard is available at http://127.0.0.1:8844.
+      Then open http://127.0.0.1:8844, choose your documents folder,
+      and follow the guided scanner sharing setup. Paperless will wait
+      safely without processing documents until setup is complete.
     EOS
   end
 
