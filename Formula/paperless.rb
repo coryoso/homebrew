@@ -1,8 +1,8 @@
 class Paperless < Formula
   desc "Local-first document intake and filing service for macOS"
   homepage "https://github.com/coryoso/paperless"
-  url "https://github.com/coryoso/paperless/releases/download/v0.3.0/paperless_0.3.0_darwin_all.tar.gz"
-  sha256 "f9e43364f5f55faa5b3ada273ee8cc627f06b6b670c128c132b28b2b66b577c8"
+  url "https://github.com/coryoso/paperless/releases/download/v0.3.1/paperless_0.3.1_darwin_all.tar.gz"
+  sha256 "686fd621b214c6a870bb2d30f0f98f8b35a4e690da4ec8d59fb9ce281d0d17c5"
   depends_on :macos
 
   depends_on "poppler"
