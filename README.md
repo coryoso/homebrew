@@ -26,10 +26,12 @@ Stable upstream releases update their formulae in this repository automatically.
 
 Native macOS PostgreSQL client for Apple silicon and Intel (macOS 26+). Releases are signed and notarized.
 
-Posty's source and release downloads are private. Sign in with `gh` using a GitHub account that has access to `coryoso/posty`, then run:
+Install the signed app with:
 
 ```bash
-HOMEBREW_GITHUB_API_TOKEN="$(gh auth token)" brew install --cask coryoso/homebrew/posty
+brew install --cask coryoso/homebrew/posty
 ```
 
-Use the same token environment variable when upgrading. This tap stores only the cask definition; the app stays in the private repository.
+If Homebrew requires cask trust, review the cask and run `brew trust --cask coryoso/homebrew/posty`, then repeat the install command.
+
+Source, release downloads, and release notes are available in [coryoso/posty](https://github.com/coryoso/posty). No GitHub token is required. Update with `brew update` followed by `brew upgrade --cask coryoso/homebrew/posty`.
